@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolaMundo!</title>
+    <script>
+        alert("Hola mundo")
+    </script>
+    <script>
+        function FuncionEjemplo(){
+            alert("Hola mundo!");//Te sale como pop-up   
+        }
+        alert("Hola mundo")
+    </script>
+    <script src="eventoExterno.js"></script>
+    
+    
+</head>
+<body>
+    <h2>Boton de forma interna sin funcion</h2>
+    <button onclick='alert("HolaMundo!")'>Pulsa aquí!</button>
+    <h2>Alerta en un evento de boton</h2>
+    <button onclick=" FuncionEjemplo()"> Pulsa aqui</button>
+    <h2>Alerta de boton en un fichero externo</h2>
+    <button onclick="funcionExterna()">Pulse</button>
+    
+    
+    
+</body>
+</html>
