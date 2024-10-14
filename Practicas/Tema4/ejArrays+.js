@@ -23,6 +23,5 @@ function ej11() {
   let inicio = prompt("Ahora introduce la palabra que quieras meter:");
   array = txt.split(" ");
   array.unshift(array.reverse(), inicio);
-  
   alert(array);
 }
