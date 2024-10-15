@@ -32,20 +32,56 @@ function ej12(array1, array2) {
     let arrayTemp = array2;
     array2 = array1;
     array1 = arrayTemp;
-  } //Con esto deberiamos hacer que siempre array 2 sea el pequeño y el uno el largo
+  } //Siempre array 2 será el pequeño y 1 el largo.
   for (let b = 0; b < array1.length; b++) {
-    //Este primer bucle recorre los elementos de la primera array
-    let cont = 1; //Seteamos para cada elemento de la primera array un contador con 1
+    let cont = 1;
     for (let c = 0; c < array2.length; c++) {
-      //Este segundo es el que recorre la segunda array
       if (array1[b] == array2[c]) {
         cont++;
       }
     } //Entonces este recorre con el elemnto b toda la array2 y mira si alguno es igual al elemento b de la array,si lo es, contador sube
     if (cont == 1) {
       array.push(array1[b]);
-    } //Si ningun elemento como b es de la array,contador sera 1 y metera el elemento a la array.!!!!Suponemos que array1 es mas grande que el 2!!!
+    } //Si ningun elemento como b es de la array,contador sera 1 y metera el elemento a la array
+    if (cont == 1 && array1.length == array2.length) {
+      array.push(array2[b]);
+    }
+  } //OJO:HAY QUE METER ESTE CONDICIONAL POR SI ARRAY2 ES DE MISMA LONGITUD,SI NO EL ULTIMO ELEMENTO DE array2 AUNQUE SEA UNICO JAMAS LO METE
+  alert(array);
+  return array;
+}
+
+function ej13(array13) {
+  let juego=prompt("Introduce ahora el nombre del juego:");
+  alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);
+  for(let a=1;a<=3;a++){
+    let min=Math.min(array13);
+    for(let b=0;b<array13.length;b++)
+      if(array13[b]==min){
+        array13.splice(b,1);
+      }
   }
-  console.log(array); //POR AHORA NO COMPRUEBA SI EL ULTIMO ELEMENTO de la array 2 es unico y no lo mete a la array
+  alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);
+
+}
+
+function creaArraysNum() {
+  let array = [];
+  let elemento;
+  let cont = 1;
+  do {
+    elemento = parseFloat(
+      prompt(
+        "Introduce un número como elemento " +
+          cont +
+          " ,si no lo es terminara de pedir*"
+      )
+    );
+    array.push(elemento);
+    if (!Number.isInteger(array[cont - 1])) {
+      array.pop();
+    }
+    cont++;
+  } while (Number.isInteger(elemento));
   return array;
 }
