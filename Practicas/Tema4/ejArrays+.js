@@ -45,6 +45,7 @@ function ej12(array1, array2) {
     if (cont == 1) {
       array.push(array1[b]);
     } //Si ningun elemento como b es de la array,contador sera 1 y metera el elemento a la array.!!!!Suponemos que array1 es mas grande que el 2!!!
+                                                                                                                                                                                                                                               
   }
   console.log(array); //POR AHORA NO COMPRUEBA SI EL ULTIMO ELEMENTO de la array 2 es unico y no lo mete a la array
   return array;
