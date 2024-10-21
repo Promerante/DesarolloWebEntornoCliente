@@ -27,42 +27,34 @@ function ej11() {
 }
 
 function ej12(array1, array2) {
-  let array = [];
-  if (array2.length > array1.length) {
-    let arrayTemp = array2;
-    array2 = array1;
-    array1 = arrayTemp;
-  } //Siempre array 2 será el pequeño y 1 el largo.
-  for (let b = 0; b < array1.length; b++) {
-    let cont = 1;
-    for (let c = 0; c < array2.length; c++) {
-      if (array1[b] == array2[c]) {
+  let array = array1.concat(array2); //Tendra la union de los 2 arrays
+  var arrayFinal = [];
+  for (let i = 0; i < array.length; i++) {
+    let cont = 0;
+    for (let j = 0; j < array.length; j++) {
+      if (array[i] == array[j]) {
         cont++;
       }
-    } //Entonces este recorre con el elemnto b toda la array2 y mira si alguno es igual al elemento b de la array,si lo es, contador sube
+    } //Entonces cada elemento recorrera todos los elementos de la array unida si alguno es igual el contador sube.
     if (cont == 1) {
-      array.push(array1[b]);
-    } //Si ningun elemento como b es de la array,contador sera 1 y metera el elemento a la array
-    if (cont == 1 && array1.length == array2.length) {
-      array.push(array2[b]);
+      arrayFinal.push(array[i]);
     }
-  } //OJO:HAY QUE METER ESTE CONDICIONAL POR SI ARRAY2 ES DE MISMA LONGITUD,SI NO EL ULTIMO ELEMENTO DE array2 AUNQUE SEA UNICO JAMAS LO METE
-  alert(array);
-  return array;
+  }
+  console.log(arrayFinal);
+  return arrayFinal;
 }
 
 function ej13(array13) {
-  let juego=prompt("Introduce ahora el nombre del juego:");
+  let juego = prompt("Introduce ahora el nombre del juego:");
   alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);
-  for(let a=1;a<=3;a++){
-    let min=Math.min(array13);
-    for(let b=0;b<array13.length;b++)
-      if(array13[b]==min){
-        array13.splice(b,1);
+  for (let a = 1; a <= 3; a++) {
+    let min = Math.min(array13);
+    for (let b = 0; b < array13.length; b++)
+      if (array13[b] == min) {
+        array13.splice(b, 1);
       }
   }
   alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);
-
 }
 
 function creaArraysNum() {
