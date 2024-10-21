@@ -44,19 +44,6 @@ function ej12(array1, array2) {
   return arrayFinal;
 }
 
-function ej13(array13) {
-  let juego = prompt("Introduce ahora el nombre del juego:");
-  alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);
-  for (let a = 1; a <= 3; a++) {
-    let min = Math.min(array13);
-    for (let b = 0; b < array13.length; b++)
-      if (array13[b] == min) {
-        array13.splice(b, 1);
-      }
-  }
-  alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);
-}
-
 function creaArraysNum() {
   let array = [];
   let elemento;
@@ -76,4 +63,40 @@ function creaArraysNum() {
     cont++;
   } while (Number.isInteger(elemento));
   return array;
+}
+
+function ej13(array13) {
+  let juego = prompt("Introduce ahora el nombre del juego:");
+  alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);
+  array13.sort();
+  for (let i = 1; i <= 3; i++) {
+    array13.shift();
+  }
+  alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);//PASO 1
+  for (let i = 1; i <= 3; i++) {
+    elemento = parseFloat(
+      prompt(`Introduce la puntuacion que entrará en la posición ${i * 2}`)
+    );
+      array13.splice(i * 2, 0, elemento);
+    if (!Number.isInteger(array13[i * 2])) {
+      array13.splice(i * 2, 1);
+      i--;
+    }
+  }
+  alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`);//PASO2
+  do{
+    noAdmitido=false;
+    var posicion=parseFloat(prompt("Introduce desde que posicion quieres empezar a borrar"));
+    if(posicion>(array13.length-1)|| posicion<0){//Controlamos si la posicion que da esta entre el 0 y la posicion mas grande posible
+      alert("La posicion dada no es valida.")
+      noAdmitido=true;
+    }
+    var cantidad=parseFloat(prompt("Introduce la cantidad de elementos que quieres borrar"));
+    if(cantidad<0){
+      alert(`Dada la posicion ${posicion}, la cantidad no es valida`)
+      noAdmitido=true;
+    }
+  }while(noAdmitido);
+  array13.splice(posicion,cantidad);
+  alert(`Las puntuaciones del juego ${juego} son las siguientes: ${array13}`)//PASO 3
 }
