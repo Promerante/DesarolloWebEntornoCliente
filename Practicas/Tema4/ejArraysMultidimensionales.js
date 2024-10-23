@@ -145,31 +145,63 @@ function ej22() {
   let num;
   let cont = 1;
   do {
-    num=parseInt(prompt(`Introduzca el elemento ${cont}:`));
+    num = parseInt(prompt(`Introduzca el elemento ${cont}:`));
     array.push(num);
     cont++;
-    if(!(num>=0&&num<=99&&Number.isInteger(num))){
-      array=[];
-      cont=1;
-      num=1;
+    if (!(num >= 0 && num <= 99 && Number.isInteger(num))) {
+      array = [];
+      cont = 1;
+      num = 1;
     }
-  } while (num>=0&&num<=99&&Number.isInteger(num)&&cont<=10);
-  let ind=[];
-  for(let i=0;i<10;i++){
+  } while (num >= 0 && num <= 99 && Number.isInteger(num) && cont <= 10);
+  let ind = [];
+  for (let i = 0; i < 10; i++) {
     ind.push(i);
   }
-  let array22=[ind,array];
-  console.log(array22);//Esto en forma de array,si queremos poner lo de "Indice valor" tendriamos que convertilo a String y gestionar los espacios si el valor es mayor que 9
+  let array22 = [ind, array];
+  console.log(array22); //PASO 1
+  //Esto en forma de array,si queremos poner lo de "Indice valor" tendriamos que convertilo a String
+  //y gestionar los espacios si el valor es mayor que 9
   let inicio;
   let final;
-  do{
-    inicio=parseInt(prompt("Introduce el inicio:"));
-    final=parseInt(prompt("Introduce el final:"));
-    if(!(inicio<10&&inicio>=0&&final<10&&final>=0&&final>inicio&&Number.isInteger(inicio)&&Number.isInteger(final))){
-      let inicio=1;
-      let final=2;
+  do {
+    inicio = parseInt(prompt("Introduce el inicio:"));
+    final = parseInt(prompt("Introduce el final:"));
+    if (
+      !(
+        inicio < 10 &&
+        inicio >= 0 &&
+        final < 10 &&
+        final >= 0 &&
+        final > inicio &&
+        Number.isInteger(inicio) &&
+        Number.isInteger(final)
+      )
+    ) {
+      let inicio = 1;
+      let final = 2;
     }
-  }while(!(inicio<10&&inicio>=0&&final<10&&final>=0&&final>inicio&&Number.isInteger(inicio)&&Number.isInteger(final)));
-  //Falta la ultima parte
-  
+  } while (
+    !(
+      inicio < 10 &&
+      inicio >= 0 &&
+      final < 10 &&
+      final >= 0 &&
+      final > inicio &&
+      Number.isInteger(inicio) &&
+      Number.isInteger(final)
+    )
+  );
+  //PASO 2
+  let arrayCambiado = []; //OJO:HACEMOS UNA COPIA PARA VER LOS CAMBIOS EN CONSOLA
+  let arrayReordenado = [ind, arrayCambiado];
+
+
+  //Guardamos los valores a intercambiar en variables temporales
+  for (let i = 0; i < array.length; i++) {  
+      arrayCambiado[i + 1] = array[i];
+  } 
+  arrayCambiado.splice(0, 1, arrayCambiado[arrayCambiado.length-1]);
+  arrayCambiado.pop();
+  console.log(arrayReordenado);
 }
