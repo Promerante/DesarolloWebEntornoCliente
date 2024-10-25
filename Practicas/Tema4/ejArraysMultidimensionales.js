@@ -65,6 +65,7 @@ function ej17() {
   }
   console.log(txt);
 }
+
 function ej18() {
   let adn = prompt("Introduce la cadena de ADN:").toUpperCase();
   let adnArray = adn.split("");
@@ -195,13 +196,18 @@ function ej22() {
   //PASO 2
   let arrayCambiado = []; //OJO:HACEMOS UNA COPIA PARA VER LOS CAMBIOS EN CONSOLA
   let arrayReordenado = [ind, arrayCambiado];
-
-
+  let temp=array[inicio];
+  for (let i = 0; i < array.length; i++) {
+    if (i > inicio && i < final) {
+      arrayCambiado[i] = array[i];
+    } else if (i != 0) {
+      arrayCambiado[i] = array[i - 1];
+    } else {
+      arrayCambiado[i] = array[array.length - 1];
+    }
+  }
   //Guardamos los valores a intercambiar en variables temporales
-  for (let i = 0; i < array.length; i++) {  
-      arrayCambiado[i + 1] = array[i];
-  } 
-  arrayCambiado.splice(0, 1, arrayCambiado[arrayCambiado.length-1]);
-  arrayCambiado.pop();
+  arrayCambiado.splice(final,1,temp);
+
   console.log(arrayReordenado);
 }
