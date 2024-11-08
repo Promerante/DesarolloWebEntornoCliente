@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto de ejemplo</title>
+    <script src="temp.js"></script>
+    <style>
+        .estiloOriginal{
+            color: black;
+            font-size: 16px;
+        }
+        .nuevoEstilo{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table id="miTabla" width="300px" height="200px" border="2px">
+        <tr>
+            <td>celda1</td>
+            <td>celda2</td>
+        </tr>
+    </table>
+    <p>
+        <button onclick="modificarTabla()">modificarTabla</button>
+    </p>
+    <p id="parra">
+        Texto de ejemplo
+    </p>
+    <p>
+        <button onclick="cambiarTexto()">modificar texto</button>
+    </p>
+    <p id="texto">
+        Este es el texto a copiar
+    </p>
+    <p id="destino">
+        Aqui se va a cambiar
+    </p>
+    <p>
+        <button onclick="copiarTexto()">copiar texto</button>
+    </p>
+    <div id="padre">
+        texto1
+        <p id="hijo">
+            Esto lo cambia
+        </p>
+    </div>
+    <button onclick="pisarTexto()">pisar texto</button>
+    <p id="estilo" class="estiloOriginal">Este es el parrafo original</p>
+    <button onclick="cambiarEstTexto()">Cambiar estilo texto</button>
+        
+    <div id="containerNum">0</div>
+    <button onclick="suma()">INCREMENTA</button>
+    <button onclick="resta()">DECRECE</button>
+</body>
+</html>
