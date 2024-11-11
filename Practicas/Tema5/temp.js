@@ -25,7 +25,7 @@ window.onload=function(){
         let caja= document.getElementById("containerNum");
         let num=parseInt(caja.textContent);
         num++;
-        caja.textContent=num;
+        caja.textContent=num; 
     }
     function resta() {
         let caja= document.getElementById("containerNum");
@@ -33,6 +33,11 @@ window.onload=function(){
         num--;
         caja.textContent=num;
     }
+    function cambiarTexto2(parrafo){
+        parrafo.textContent="yei,has hecho click en mí";
+        alert("OH NO,ME HAS CAMBIADO :C")
+    }
+    window.cambiarTexto2=cambiarTexto2;
     window.resta=resta;
     window.suma=suma;
     window.cambiarTexto=cambiarTexto;
