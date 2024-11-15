@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej DOM 3</title>
+    <script src="ejDOM3.js"></script>
+    <style>
+        #containerImg{
+            top: 0px;
+            left: 0px;
+            position: absolute;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 9:</h1>
+    <p
+      class="p1"
+      style="
+        background-color: red;
+        border: 2px solid black;
+        width: 200px;
+        color: white;
+      "
+      onclick="cambiarEstilo(this)"
+    >
+      Soy el parrafo 1.
+    </p>
+    <p
+      class="p2"
+      style="
+        background-color: blue;
+        border: 5px solid black;
+        width: 400px;
+        color: yellow;
+      "
+      onclick="cambiarEstilo(this)"
+    >
+      Soy el parrafo 2.
+    </p>
+    <h1>Ejercicio 10:</h1>
+    <div
+      class="cont1"
+      style="
+        background-color: black;
+        color: white;
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+      "
+      onmouseover="document.body.style.backgroundColor='yellow';"
+      onmouseout="document.body.style.backgroundColor='white'"
+    >
+      Hey!Soy el contenedor 1
+    </div>
+    <div
+      class="cont2"
+      style="
+        background-color: black;
+        color: white;
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+      "
+      onmouseover="document.body.style.backgroundColor='yellow';"
+      onmouseout="document.body.style.backgroundColor='white'"
+    >
+      Hey!Soy el contenedor 2
+    </div>
+    <div
+      class="cont3"
+      style="
+        background-color: black;
+        color: white;
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+      "
+      onmouseover="document.body.style.backgroundColor='yellow';"
+      onmouseout="document.body.style.backgroundColor='white'"
+    >
+      Hey!Soy el contenedor 3
+    </div>
+    <h1>Ejercicio 11:</h1>
+    <div
+      id="container"
+      style="background-color: red; width: 300px; height: 100px"
+      onmouseover="ejercicio11()"
+    >
+      Soy el DIV 1
+    </div>
+    <div
+      id="container2"
+      style="
+        background-color: blue;
+        width: 300px;
+        height: 100px;
+        visibility: hidden;
+      "
+    >
+      Soy el DIV 2
+    </div>
+    <div
+      id="container3"
+      style="
+        background-color: purple;
+        width: 300px;
+        height: 100px;
+        display: none;
+      "
+    >
+      Soy el DIV 3
+    </div>
+    <h1>Ejercicio12:</h1>
+        <button onclick="usainCorre(this)" value="izq">Izquierda</button>
+        <button onclick="usainCorre(this)" value="der">Derecha</button>
+        <button onclick="usainCorre(this)" value="reset">Reset</button>
+    <div id="containerImg" >
+        
+        <img src="imagenes/usainCorre.PNG" style="width: 300px; height: auto; " id="usain"/>
+    </div>
+  </body>
+</html>

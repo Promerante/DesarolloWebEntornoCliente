@@ -28,6 +28,7 @@ window.onload = function () {
       //Ponemos estos break porque querremos la i solo para identificar la posicion de la array UNA VEZ, si lo dejamos cambiaria intermitentemente
     }
   }
+  
   window.cambiarCelda = cambiarCelda;
   window.cambiarCelda2 = cambiarCelda2;
   window.cambiarFondo = cambiarFondo;
