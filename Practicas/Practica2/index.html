@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 2</title>
+    <script src="miScript.js"></script>
+    <style>
+      .estilo1 {
+        color: blue;
+        background-color: whitesmoke;
+        font-weight: normal;
+      }
+      .estilo2 {
+        color: white;
+        background-color: black;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 1</h1>
+    <br />
+    <a href="#inicio" id="inicio">Inicio</a>
+    <a href="#servicios" id="servicios">Servicios</a>
+    <a href="#contacto" id="contacto">Contacto</a>
+    <br />
+    <button onclick="actualizar()">Actualizar</button>
+    <button onclick="resaltar()">Resaltar</button>
+
+    <h1>Ejercicio 2</h1>
+    <br />
+    <pre class="parrafo">
+        Buenas, soy el parrafo a examinar!
+        Veamos que sucede con esta segunda linea tambien.
+    </pre>
+    <button onclick="estilo2()">Cambiar estilo</button>
+    <button onclick="cambiaTxt()">Cambiar texto</button>
+
+    <h1>Ejercicio 3</h1>
+    <br />
+    <table style="width: 300px; height: 200px; border: 2px solid black">
+      <tr>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+      </tr>
+      <tr>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+      </tr>
+      <tr>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+        <td style="border: 2px solid black" onclick="ej3(this)">Pendiente</td>
+      </tr>
+    </table>
+    <h1>Ejercicio 4</h1>
+    <br />
+    <div class="containerImg">
+      <button onclick="ej4(false)">Anterior</button>
+      <button onclick="ej4(true)">Siguiente</button>
+      <img
+        src="Fotos/CSS.png"
+        alt="1"
+        style="display: block; width: 300px; height: 300px"
+        class="imagenes"
+      />
+      <img
+        src="Fotos/HTML.png"
+        alt="2"
+        style="display: none; width: 300px; height: 300px"
+        class="imagenes"
+      />
+      <img
+        src="Fotos/JS.png"
+        alt="3"
+        style="display: none; width: 300px; height: 300px"
+        class="imagenes"
+      />
+      <img
+        src="Fotos/PHP.png"
+        alt="4"
+        style="display: none; width: 300px; height: 300px"
+        class="imagenes"
+      />
+      <img
+        src="Fotos/Python.png"
+        alt="5"
+        style="display: none; width: 300px; height: 300px"
+        class="imagenes"
+      />
+    </div>
+  </body>
+</html>
